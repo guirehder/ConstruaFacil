@@ -41,6 +41,15 @@ public class Calc {
             case 1:
                 System.out.println (somarDoisNumeros(num1, num2));
                 break;
+            case 2:
+                System.out.println (subtrairDoisNumeros(num1, num2));
+                break;
+            case 3:
+                System.out.println (multiplicarDoisNumeros(num1, num2));
+                break;
+            case 4:
+                System.out.println (dividirDoisNumeros(num1, num2));
+                break;
             default:
                 System.out.println("Opção invalida");
                 break;
@@ -52,6 +61,17 @@ public class Calc {
         return num1 + num2;
     }
 
+    public static int subtrairDoisNumeros(int num1, int num2) {
+        return num1 - num2;
+    }
+
+    public static int multiplicarDoisNumeros(int num1, int num2) {
+        return num1 * num2;
+    }
+
+    public static int dividirDoisNumeros(int num1, int num2) {
+        return num1 / num2;
+    }
 
 
 }
