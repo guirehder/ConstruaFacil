@@ -1,5 +1,5 @@
 {
-  "id": 1012,
+  "id": 2012,
   "category": {
     "id": 1,
     "name": "dog"
@@ -18,5 +18,5 @@
       "name": "Animal vermifugado na segunda semana"
     }
   ],
-  "status": "available"
+  "status": "sold"
 }
