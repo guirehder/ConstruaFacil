@@ -1,0 +1,22 @@
+{
+  "id": 2012,
+  "category": {
+    "id": 1,
+    "name": "dog"
+  },
+  "name": "Kiara",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "Animal vermifugado na primeira semana"
+    },
+    {
+      "id": 1,
+      "name": "Animal vermifugado na segunda semana"
+    }
+  ],
+  "status": "sold"
+}

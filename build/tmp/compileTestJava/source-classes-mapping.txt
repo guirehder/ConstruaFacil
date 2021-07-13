@@ -1,0 +1,10 @@
+unitTests/TestaCalc.java
+ unitTests.TestaCalc
+apiTests/testaPet.java
+ apiTests.testaPet
+webTests/seleniumIDE.java
+ webTests.seleniumIDE
+utils/Evidencias.java
+ utils.Evidencias
+webTests/seleniumSimples.java
+ webTests.seleniumSimples
