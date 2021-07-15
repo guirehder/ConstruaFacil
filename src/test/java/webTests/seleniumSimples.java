@@ -11,12 +11,14 @@ import org.testng.annotations.*;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 import utils.Evidencias;
+import utils.Logs;
 
 
 // 3 - Classe
@@ -25,9 +27,20 @@ public class seleniumSimples {
 
     WebDriver driver;                           // declarar o objeto do Selenium WebDriver
     Evidencias evidencias;
-    static String dataHora = new SimpleDateFormat ("yyyy-MM-dd HH-mm").toString();
+    Logs logs;
+    static String dataHora = new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime());
 
     // 3.2 - Métodos e Funções
+
+    // Executa 1 vez apenas, no início da execução do script
+    @BeforeClass
+    public void antesDeTudo() throws IOException {
+        logs = new Logs();
+        logs.iniciarLogCSV(dataHora);
+
+    }
+
+    // Executa antes de cada @Test
     @BeforeMethod
     public void iniciar(){
         // A - Início
@@ -38,6 +51,7 @@ public class seleniumSimples {
         driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
 
         evidencias = new Evidencias(); //Instanciar
+
     }
 
     @AfterMethod
@@ -52,11 +66,15 @@ public class seleniumSimples {
     public void consultarCursoMantis() throws IOException {
         String casoDeTeste = "Consultar Curso Mantis";
         // B - Realizar o teste
-        driver.get("https://www.iterasys.com.br");                              // Abre o site alvo informado
+        logs.registrarCSV ( casoDeTeste, "Iniciou o teste");
+        driver.get("https://www.iterasys.com.br");
+        logs.registrarCSV ( casoDeTeste, "Abriu o site");
         evidencias.print(driver,dataHora,casoDeTeste, "Passo 1 - Abriu o site");
         driver.findElement(By.id("searchtext")).click();                        // Clica no campo de pesquisa
+        logs.registrarCSV ( casoDeTeste, "Clicou na caixa de pesquisa");
         driver.findElement(By.id("searchtext")).clear();                        // Limpa o campo de pesquisa
         driver.findElement(By.id("searchtext")).sendKeys("mantis");  // Escreve "mantis" no campo
+        logs.registrarCSV ( casoDeTeste, "Escreve mantis no campo");
 
         evidencias.print(driver,dataHora,casoDeTeste , "Passo 2 - Digitou Mantis");
 

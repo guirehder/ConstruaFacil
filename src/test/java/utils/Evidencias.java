@@ -12,7 +12,7 @@ public class Evidencias {
 
     public void print (WebDriver driver,String dataHora,String casoDeTeste ,String nomePrint) throws IOException {
         File foto = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(foto, new File("target/prints/" + dataHora + "/" + casoDeTeste + "/" + nomePrint + ".png"));
+            FileUtils.copyFile(foto, new File("target/prints/" + dataHora + "/" + casoDeTeste + "/" + nomePrint + ".png"));
 
     }
 }

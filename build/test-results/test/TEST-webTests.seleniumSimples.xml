@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="webTests.seleniumSimples" tests="2" skipped="0" failures="0" errors="0" timestamp="2021-07-13T01:40:12" hostname="DESKTOP-3IUOPAG" time="49.671">
+<testsuite name="webTests.seleniumSimples" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-07-15T01:34:15" hostname="DESKTOP-3IUOPAG" time="19.893">
   <properties/>
-  <testcase name="consultarCursoMantis" classname="webTests.seleniumSimples" time="23.689"/>
-  <testcase name="consultarCursoCTFL" classname="webTests.seleniumSimples" time="22.644"/>
+  <testcase name="consultarCursoMantis" classname="webTests.seleniumSimples" time="19.893"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 48581
+  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 48973
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-jul 12, 2021 10:40:12 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFORMAÇÕES: Detected dialect: W3C
-Starting ChromeDriver 91.0.4472.101 (af52a90bf87030dd1523486a1cd3ae25c5d76c9b-refs/branch-heads/4472@{#1462}) on port 26582
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-jul 12, 2021 10:40:39 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+jul 14, 2021 10:34:15 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFORMAÇÕES: Detected dialect: W3C
 ]]></system-err>
 </testsuite>
